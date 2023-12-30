@@ -1,4 +1,6 @@
+import argparse
 import os
+import time
 
 from mrjob.job import MRJob
 from mrjob.step import MRStep
@@ -53,4 +55,8 @@ class MatrixMultiplication(MRJob):
 
 
 if __name__ == '__main__':
-    MatrixMultiplication.run()
+    start_time = time.time()
+    MatrixMultiplication().run()
+    end_time = time.time()
+    execution_time = end_time - start_time
+    print(f"Execution time: {execution_time} seconds")
