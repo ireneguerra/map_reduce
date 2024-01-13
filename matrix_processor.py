@@ -24,4 +24,4 @@ class MatrixProcessor:
 
 if __name__ == '__main__':
     matrices = MatrixProcessor('matrix_a.txt', 'matrix_b.txt')
-    matrices.processor_matrices('resources/1138_bus.mtx', 'resources/1138_bus.mtx', 'matrices.txt')
+    matrices.processor_matrices('resources/arc130.mtx', 'resources/arc130.mtx', 'matrices.txt')
