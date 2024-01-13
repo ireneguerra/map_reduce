@@ -1,4 +1,3 @@
-import argparse
 import os
 import time
 
@@ -11,11 +10,9 @@ class MatrixMultiplication(MRJob):
         matrix, row, col, value = line.split(',')
 
         if matrix == 'A':
-            # Emit intermediate key-value pairs for each element in matrix A
             for k in range(self.matrix_b_cols):
                 yield (int(row), k), (matrix, int(col), float(value))
         else:
-            # Emit intermediate key-value pairs for each element in matrix B
             for i in range(self.matrix_a_rows):
                 yield (i, int(col)), (matrix, int(row), float(value))
 
